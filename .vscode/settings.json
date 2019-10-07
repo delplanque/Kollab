@@ -18,10 +18,6 @@
     "**/.vscode": false
   },
   "workbench.colorCustomizations": {
-    "activityBar.background": "#205143",
-    "activityBar.foreground": "#FFF",
-    "activityBar.inactiveForeground": "#96d8c9",
-    "activityBarBadge.background": "#e93645",
-    "activityBarBadge.foreground": "#e7e7e7"
+
   }
 }
