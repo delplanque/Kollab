@@ -1,0 +1,27 @@
+{
+  "files.exclude": {
+    "**/node_modules": false,
+    "**/test": true,
+    //"**/admin": true,
+    "**/package-lock.json": true,
+    "**/.postcssrc.js": true,
+    "**/.eslintignore": true,
+    "**/.editorconfig": true,
+    "**/.babelrc": true,
+    "**/.eslintrc.js": true,
+    "**/.gitignore": true,
+    "**/config": false,
+    "**/babel.config.js": true,
+    "**/.browserslistrc": true,
+    "**/postcss.config.js": true,
+    "**/static": true,
+    "**/.vscode": false
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#205143",
+    "activityBar.foreground": "#FFF",
+    "activityBar.inactiveForeground": "#96d8c9",
+    "activityBarBadge.background": "#e93645",
+    "activityBarBadge.foreground": "#e7e7e7"
+  }
+}
