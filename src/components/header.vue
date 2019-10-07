@@ -1,16 +1,18 @@
 <template>
   <v-app-bar
-      color="deep-purple accent-4"
+      color="#303F9F"
       dense
       dark>
-    <v-layout
-      row
-      mt-1>
-      <v-flex>
-        {{ 'tes' }}
-      </v-flex>
+      <v-layout>
+        <v-flex md11>
+
+        </v-flex>
+        <v-flex>
+          <v-app-bar-nav-icon @click.stop="drawer = !drawer" ></v-app-bar-nav-icon>
+        </v-flex>
       </v-layout>
   </v-app-bar>
+  
 </template>
 
 <script>

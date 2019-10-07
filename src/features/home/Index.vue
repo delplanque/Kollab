@@ -22,6 +22,8 @@
       v-model="drawer"
       absolute
       temporary
+      right
+      color="#303F9F"
     >
      <v-avatar>
         <img src="https://randomuser.me/api/portraits/men/84.jpg">
@@ -33,12 +35,15 @@
 </template>
 
 <script>
+import Vue from "vue";
+
 export default {
   name: "home",
 
   data() {
     return {
       drawer: null,
+      imageNasa: '',
         items: [
           { title: 'Home', icon: 'dashboard' },
           { title: 'About', icon: 'question_answer' }
@@ -46,6 +51,7 @@ export default {
     };
   },
 
+  created () {},
 
   components: {},
 
