@@ -1,17 +1,19 @@
 <template>
-  <div id="app">
-    <main class="main">
-      <router-view></router-view>
-    </main>
+  <div class="main-layout">
+    <main-header></main-header>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 
+import mainHeader from '../components/header'
+
 export default {
-  name: "App",
+  name: "main-layout",
 
   components: {
+    mainHeader
   },
 
   mounted() {},
@@ -21,6 +23,9 @@ export default {
 </script>
 
 
-<style lang="scss">
-
+<style lang="css" scoped>
+  .main-layout {
+    height: 100%;
+    width: 100%;
+  }
 </style>

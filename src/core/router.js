@@ -19,31 +19,6 @@ export default new Router({
       component: loadView("home")
     },
     {
-      path: "/plastic",
-      name: "plastic",
-      component: loadView("plastic")
-    },
-    {
-      path: "/deforestation",
-      name: "deforestation",
-      component: loadView("deforestation")
-    },
-    {
-      path: "/air-quality",
-      name: "air-quality",
-      component: loadView("air-quality")
-    },
-    {
-      path: "/biodiversity",
-      name: "biodiversity",
-      component: loadView("biodiversity")
-    },
-    {
-      path: "/natural-ressource",
-      name: "natural-ressource",
-      component: loadView("natural-ressource")
-    },
-    {
       path: "*",
       redirect: "/"
     }
