@@ -8,7 +8,7 @@
 
 <script>
 import HeaderBar from '../components/header';
-import { database } from "@/core/database";
+import { database } from '@/core/database';
 import Breadcrumbs from '../components/breadcrumbs';
 // import navDrawer from "../components/navDrawer";
 
@@ -27,17 +27,17 @@ export default {
     };
   },
 
-  /*firebase: {
+  firebase: {
     items: database.ref('collaborativeTools'),
     itemsObj: {
       source: database.ref('collaborativeTools'),
       asObject: true
     }
-  },*/
+  },
 
-  mounted() {},
-  created() {
-    console.log(database.ref('collaborativeTools'))
+  created() {},
+  mounted() {
+    console.log('items', this.items);
   },
   methods: {
     openNav(value) {
