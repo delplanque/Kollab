@@ -1,12 +1,9 @@
 <template>
   <section class="toolbox">
-    <ul class="toolbox__onglet container">
-      <li
-        :class="{ active: isActive('collaboratif') }"
-        @click="changeTab('collaboratif')"
-      >Collaboratifs</li>
-      <li :class="{ active: isActive('officiel') }" @click="changeTab('officiel')">Officiels</li>
-      <li :class="{ active: isActive('add') }" @click="changeTab('add')">Mes Ajouts</li>
+    <ul class="toolbox__onglet container" id="changeTabs">
+      <li id="collaborativeTools" :class="{ active: isActive('collaborativeTools') }">Collaboratifs</li>
+      <li id="officialTools" :class="{ active: isActive('officialTools') }">Officiels</li>
+      <li id="personnalTools" :class="{ active: isActive('personnalTools') }">Mes Ajouts</li>
     </ul>
     <div class="toolbox__content">
       <div class="container">
@@ -19,8 +16,9 @@
 </template>
 
 <script>
-// import Vue from 'vue';
 import ItemToolbox from './item-toolbox';
+import { fromEvent } from 'rxjs';
+import { pluck, tap } from 'rxjs/operators';
 
 export default {
   name: 'toolbox',
@@ -49,13 +47,18 @@ export default {
 
   computed: {},
 
-  mounted() {},
+  mounted() {
+    const test$ = fromEvent(
+      document.querySelector('#changeTabs'),
+      'click'
+    ).pipe(
+      pluck('target', 'id'),
+      tap(id => console.log(id))
+    );
+    test$.subscribe();
+  },
 
   methods: {
-    changeTab(tab) {
-      this.tabactive = tab;
-    },
-
     isActive(tab) {
       return this.tabactive === tab;
     }
