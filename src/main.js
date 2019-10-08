@@ -1,11 +1,14 @@
 import Vue from "vue";
-import VueResource from "vue-resource";
+
 import VueFire from "vuefire";
+
+import VueResource from "vue-resource";
+
 import App from "./core/App.vue";
-import router from "./core/router";
-//import { database }     from './core/database';
-import { store } from "./store/store";
+import { database }     from './core/database';
 import { global } from "./core/environments";
+import router from "./core/router";
+import { store } from "./store/store";
 // import vuetify from './plugins/vuetify';
 
 Vue.use(VueResource);
@@ -16,7 +19,7 @@ Vue.config.environments = global.environments;
 new Vue({
   router,
 
-  //database,
+  database,
   store,
 
   // vuetify,
