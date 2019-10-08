@@ -19,23 +19,16 @@
 import ItemToolbox from './item-toolbox';
 import { fromEvent } from 'rxjs';
 import { pluck, tap } from 'rxjs/operators';
+import { database } from '@/core/database';
 
 export default {
   name: 'toolbox',
 
   data() {
     return {
-      tabactive: 'collaboratif',
-      toolbox: [
-        {
-          name: '1',
-          link: '1'
-        },
-        {
-          name: '2',
-          link: '1'
-        }
-      ]
+      getToolbox$: null,
+      tabactive: 'collaborativeTools',
+      toolbox: []
     };
   },
 
@@ -48,14 +41,20 @@ export default {
   computed: {},
 
   mounted() {
-    const test$ = fromEvent(
+    this.getToolbox$ = fromEvent(
       document.querySelector('#changeTabs'),
       'click'
     ).pipe(
       pluck('target', 'id'),
-      tap(id => console.log(id))
+      tap(id => (this.tabactive = id)),
+      tap(id => this.$bindAsArray('toolbox', database.ref(id)))
     );
-    test$.subscribe();
+
+    this.getToolbox$.subscribe();
+  },
+
+  destroyed() {
+    this.getToolbox$.unsubscribe();
   },
 
   methods: {
