@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Vue from 'vue';
+// import Vue from 'vue';
 
 export default {
   name: 'home',
