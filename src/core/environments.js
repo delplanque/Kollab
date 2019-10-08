@@ -8,8 +8,7 @@ export const global = {
     authDomain: "kollab-82b03.firebaseapp.com",
     databaseURL: "https://kollab-82b03.firebaseio.com",
     projectId: "kollab-82b03",
-    storageBucket: "",
+    storageBucket: "kollab-82b03.appspot.com",
     messagingSenderId: "95571991761",
-    appId: "1:95571991761:web:492d6709b46e9eb2baf9f0"
   }
 };
