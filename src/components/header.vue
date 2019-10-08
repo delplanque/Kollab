@@ -1,6 +1,8 @@
 <template>
   <div class="header">
-    <div class="header__container">Header</div>
+    <div class="header__container">
+      <img src="/assets/kollab.png" alt />
+    </div>
   </div>
 </template>
 
@@ -19,10 +21,13 @@ export default {
     };
   },
   computed: {},
+
   watch: {},
+
   created() {
     this.showDrawer = this.drawer;
   },
+
   methods: {
     isDrawer() {
       this.showDrawer = !this.showDrawer;
@@ -36,11 +41,16 @@ export default {
 <style scoped lang="scss">
 .header {
   background-color: #303f9f;
-  padding: 20px 15px;
+  padding: 10px 15px;
 
   &__container {
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  img {
+    width: auto;
+    max-height: 50px;
   }
 }
 </style>
