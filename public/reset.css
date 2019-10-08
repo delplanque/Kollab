@@ -452,3 +452,8 @@ input {
   width: 300px;
   padding: 10px 5px;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
