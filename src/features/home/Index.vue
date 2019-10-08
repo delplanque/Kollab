@@ -1,27 +1,27 @@
 <template>
   <section>
-    <div >
+    <div>
       <h1>Kollab</h1>
     </div>
   </section>
 </template>
 
 <script>
-import Vue from "vue";
+import Vue from 'vue';
 
 export default {
-  name: "home",
+  name: 'home',
 
   data() {
     return {
-        items: [
-          { title: 'Home', icon: 'dashboard' },
-          { title: 'About', icon: 'question_answer' }
-        ]
+      items: [
+        { title: 'Home', icon: 'dashboard' },
+        { title: 'About', icon: 'question_answer' }
+      ]
     };
   },
 
-  created () {},
+  created() {},
 
   components: {},
 
@@ -35,5 +35,4 @@ export default {
 
 
 <style scoped lang="scss">
-
 </style>
