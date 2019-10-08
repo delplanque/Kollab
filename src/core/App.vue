@@ -8,6 +8,7 @@
 
 <script>
 import HeaderBar from '../components/header';
+import { database } from "@/core/database";
 import Breadcrumbs from '../components/breadcrumbs';
 // import navDrawer from "../components/navDrawer";
 
@@ -26,8 +27,18 @@ export default {
     };
   },
 
+  /*firebase: {
+    items: database.ref('collaborativeTools'),
+    itemsObj: {
+      source: database.ref('collaborativeTools'),
+      asObject: true
+    }
+  },*/
+
   mounted() {},
-  created() {},
+  created() {
+    console.log(database.ref('collaborativeTools'))
+  },
   methods: {
     openNav(value) {
       this.drawer = value;
