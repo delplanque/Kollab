@@ -1,22 +1,23 @@
 <template>
-  <div class="main-layout">
+  <div class="app">
     <HeaderBar></HeaderBar>
-    <!-- <main-header :drawer="drawer" @openNav="openNav"></main-header> -->
+    <Breadcrumbs></Breadcrumbs>
     <router-view></router-view>
-    <!-- <nav-drawer :drawer="drawer"></nav-drawer> -->
   </div>
 </template>
 
 <script>
 import HeaderBar from '../components/header';
 import { database } from "@/core/database";
+import Breadcrumbs from '../components/breadcrumbs';
 // import navDrawer from "../components/navDrawer";
 
 export default {
   name: 'main-layout',
 
   components: {
-    HeaderBar
+    HeaderBar,
+    Breadcrumbs
     // navDrawer
   },
 
@@ -47,9 +48,8 @@ export default {
 </script>
 
 
-<style lang="css" scoped>
-.main-layout {
-  height: 100%;
+<style lang="scss" scoped>
+.app {
   width: 100%;
 }
 </style>
