@@ -21,22 +21,19 @@ export default {
 
   data: () => {
     return {
-      drawer: false
+      drawer: false,
+      collaborative: [],
+      t: 'collaborativeTools'
     };
   },
 
-  firebase: {
-    items: database.ref('collaborativeTools'),
-    itemsObj: {
-      source: database.ref('collaborativeTools'),
-      asObject: true
-    }
+
+  created() {
+    this.$bindAsArray('collaborative', database.ref(this.t))
+    console.log('items', this.collaborative);
   },
-
-  created() {},
-
   mounted() {
-    console.log('items', this.items);
+    //console.log('items', this.items);
   },
 
   methods: {
