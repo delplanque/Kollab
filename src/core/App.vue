@@ -23,21 +23,19 @@ export default {
 
   data: () => {
     return {
-      drawer: false
+      drawer: false,
+      collaborative: [],
+      t: 'collaborativeTools'
     };
   },
 
-  firebase: {
-    items: database.ref('collaborativeTools'),
-    itemsObj: {
-      source: database.ref('collaborativeTools'),
-      asObject: true
-    }
-  },
 
-  created() {},
+  created() {
+    this.$bindAsArray('collaborative', database.ref(this.t))
+    console.log('items', this.collaborative);
+  },
   mounted() {
-    console.log('items', this.items);
+    //console.log('items', this.items);
   },
   methods: {
     openNav(value) {
