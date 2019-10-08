@@ -1,6 +1,8 @@
 <template>
   <div class="main-layout">
-    <main-header @openNav='openNav'></main-header>
+    <main-header
+      :drawer="drawer"
+      @openNav='openNav'></main-header>
     <router-view></router-view>
     <nav-drawer :drawer="drawer"></nav-drawer>
   </div>

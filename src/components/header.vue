@@ -18,18 +18,27 @@
 
 export default {
   name: 'header-bar',
+  props: {
+    drawer: {
+      type: Boolean,
+      required: true
+    }
+  },
   data: () => {
     return {
-      drawer : null
+      showDrawer : null
     }
   },
   computed: {},
   watch: {},
-  created () {},
+  created () {
+    this.showDrawer = this.drawer
+  },
   methods: {
     isDrawer () {
-      this.drawer = !this.drawer
-      this.$emit('openNav', this.drawer)
+      this.showDrawer = !this.showDrawer
+      console.log(this.showDrawer)
+      this.$emit('openNav', this.showDrawer)
     }
   }
 }

@@ -14,8 +14,6 @@ export default {
 
   data() {
     return {
-      drawer: null,
-      imageNasa: '',
         items: [
           { title: 'Home', icon: 'dashboard' },
           { title: 'About', icon: 'question_answer' }

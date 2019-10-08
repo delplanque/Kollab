@@ -1,6 +1,6 @@
 <template>
   <v-navigation-drawer
-    v-model="drawer"
+    v-model="showDrawer"
     absolute
     temporary
     right
@@ -26,9 +26,14 @@ export default {
     return {
     }
   },
-  computed: {},
+  computed: {
+    showDrawer () {
+      return this.drawer
+    }
+  },
   watch: {},
-  created () {},
+  created () {
+  },
   methods: {}
 }
 </script>
