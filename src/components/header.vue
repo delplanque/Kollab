@@ -3,30 +3,35 @@
       color="#303F9F"
       dense
       dark>
-      <v-layout>
-        <v-flex md11>
-
-        </v-flex>
-        <v-flex>
-          <v-app-bar-nav-icon @click.stop="drawer = !drawer" ></v-app-bar-nav-icon>
-        </v-flex>
-      </v-layout>
+    <v-layout>
+      <v-flex md11>
+      </v-flex>
+      <v-flex>
+        <v-app-bar-nav-icon @click.stop="isDrawer" ></v-app-bar-nav-icon>
+      </v-flex>
+    </v-layout>
   </v-app-bar>
-  
 </template>
 
 <script>
+
 
 export default {
   name: 'header-bar',
   data: () => {
     return {
+      drawer : null
     }
   },
   computed: {},
   watch: {},
   created () {},
-  methods: {}
+  methods: {
+    isDrawer () {
+      this.drawer = !this.drawer
+      this.$emit('openNav', this.drawer)
+    }
+  }
 }
 </script>
 

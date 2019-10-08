@@ -1,24 +1,35 @@
 <template>
   <div class="main-layout">
-    <main-header></main-header>
+    <main-header @openNav='openNav'></main-header>
     <router-view></router-view>
+    <nav-drawer :drawer="drawer"></nav-drawer>
   </div>
 </template>
 
 <script>
 
 import mainHeader from '../components/header'
+import navDrawer  from '../components/navDrawer'
 
 export default {
   name: "main-layout",
 
   components: {
-    mainHeader
+    mainHeader,
+    navDrawer
   },
-
+    data: () => {
+    return {
+      drawer: false
+    }
+  },
   mounted() {},
-
-  methods: {}
+  created() {},
+  methods: {
+    openNav (value) {
+      this.drawer = value
+    }
+  }
 };
 </script>
 
