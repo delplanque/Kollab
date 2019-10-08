@@ -1,25 +1,43 @@
 <template>
-  <section>aef</section>
+  <section class="toolbox">
+    <div class="toolbox__onglet container">aef</div>
+    <div class="toolbox__content">
+      <div class="container">
+        <div class="toolbox__list">
+          <ItemToolbox></ItemToolbox>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
 // import Vue from 'vue';
+import ItemToolbox from './item-toolbox';
 
 export default {
   name: 'toolbox',
 
   data() {
     return {
-      items: [
-        { title: 'Home', icon: 'dashboard' },
-        { title: 'About', icon: 'question_answer' }
+      toolbox: [
+        {
+          name: '1',
+          link: '1'
+        },
+        {
+          name: '2',
+          link: '1'
+        }
       ]
     };
   },
 
   created() {},
 
-  components: {},
+  components: {
+    ItemToolbox
+  },
 
   computed: {},
 
@@ -31,4 +49,11 @@ export default {
 
 
 <style scoped lang="scss">
+.toolbox {
+  &__onglet {
+  }
+  &__content {
+    background-color: #f6f6f6;
+  }
+}
 </style>
