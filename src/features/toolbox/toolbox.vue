@@ -6,11 +6,12 @@
         @click="changeTab('collaboratif')"
       >Collaboratifs</li>
       <li :class="{ active: isActive('officiel') }" @click="changeTab('officiel')">Officiels</li>
-      <li :class="{ active: isActive('add') }" @click="changeTab('add')">Mes Ajouts</li>
+      <li :class="{ active: isActive('add') }" @click="changeTab('add')">Mes ajouts</li>
     </ul>
     <div class="toolbox__content">
       <div class="container">
         <div class="toolbox__list">
+          <ItemToolbox></ItemToolbox>
           <ItemToolbox></ItemToolbox>
         </div>
       </div>
@@ -89,6 +90,10 @@ export default {
   &__content {
     min-height: 600px;
     background-color: #f6f6f6;
+  }
+
+  &__list {
+    display: flex;
   }
 }
 </style>
