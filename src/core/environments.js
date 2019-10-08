@@ -3,12 +3,13 @@ export const global = {
     production: false,
     baseURL: "http://62.210.144.173:81/"
   },
-  /*firebase: {
-    apiKey: "AIzaSyCXqg-fnwMAx2b9M56aKoGxFPv7Y_HFO3E",
-    authDomain: "real-world-c4009.firebaseapp.com",
-    databaseURL: "https://real-world-c4009.firebaseio.com",
-    projectId: "real-world-c4009",
-    storageBucket: "real-world-c4009.appspot.com",
-    messagingSenderId: "930360037475"
-  }*/
+  firebase: {
+    apiKey: "AIzaSyDTAqNyYgLL-OzNrTab6f3aGhQnLpxf40I",
+    authDomain: "kollab-82b03.firebaseapp.com",
+    databaseURL: "https://kollab-82b03.firebaseio.com",
+    projectId: "kollab-82b03",
+    storageBucket: "",
+    messagingSenderId: "95571991761",
+    appId: "1:95571991761:web:492d6709b46e9eb2baf9f0"
+  }
 };
