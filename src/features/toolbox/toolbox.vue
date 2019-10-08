@@ -1,16 +1,12 @@
 <template>
-  <section>
-    <div>
-      <h1>Kollab</h1>
-    </div>
-  </section>
+  <section>aef</section>
 </template>
 
 <script>
 // import Vue from 'vue';
 
 export default {
-  name: 'home',
+  name: 'toolbox',
 
   data() {
     return {

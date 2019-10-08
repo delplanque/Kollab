@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="header__container">
+    <div class="header__container container">
       <img src="/assets/kollab.png" alt />
       <button class="header__menu" @click="toogleMenu()">
         <!-- prettier-ignore -->
@@ -83,8 +83,6 @@ export default {
   padding: 10px 15px;
 
   &__container {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
   }
