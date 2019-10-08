@@ -18,6 +18,14 @@
     "**/.vscode": false
   },
   "workbench.colorCustomizations": {
-
-  }
+    "activityBar.background": "#b9f8c4",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#9d8bf3",
+    "activityBarBadge.foreground": "#15202b",
+    "statusBar.background": "#8af49d",
+    "statusBarItem.hoverBackground": "#5bf076",
+    "statusBar.foreground": "#15202b"
+  },
+  "peacock.color": "#8af49d"
 }

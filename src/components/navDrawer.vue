@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer
+  <!-- <v-navigation-drawer
     v-model="showDrawer"
     absolute
     temporary
@@ -9,35 +9,32 @@
     <v-avatar>
       <img src="https://randomuser.me/api/portraits/men/84.jpg">
     </v-avatar>
-  </v-navigation-drawer>
+  </v-navigation-drawer>-->
+  <div></div>
 </template>
 
 <script>
-
 export default {
-  name: 'header-bar',
-    props: {
+  name: "header-bar",
+  props: {
     drawer: {
       type: Boolean,
       required: true
     }
   },
   data: () => {
-    return {
-    }
+    return {};
   },
   computed: {
-    showDrawer () {
-      return this.drawer
+    showDrawer() {
+      return this.drawer;
     }
   },
   watch: {},
-  created () {
-  },
+  created() {},
   methods: {}
-}
+};
 </script>
 
 <style scoped lang="scss">
-
 </style>
