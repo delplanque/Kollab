@@ -1,5 +1,7 @@
 <template>
-  <div>Header</div>
+  <div class="header">
+    <div class="header__container">Header</div>
+  </div>
 </template>
 
 <script>
@@ -32,30 +34,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.searchIcon {
-  min-width: 28px !important;
-  cursor: pointer;
-}
+.header {
+  background-color: #303f9f;
+  padding: 20px 15px;
 
-.svgHeaderWidth12 {
-  min-width: 12px !important;
-  min-height: 32px;
-  opacity: 0.5;
-}
-
-.svgHeaderWidth20 {
-  min-width: 20px !important;
-}
-
-.deleteSearch:hover {
-  cursor: pointer;
-}
-
-.open-menu {
-  padding: 4px;
-  max-height: 400px;
-  overflow: auto;
-  // background-color: #252525;
-  background: linear-gradient(0deg, #00a1db 0%, #0068b4 100%);
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 </style>
