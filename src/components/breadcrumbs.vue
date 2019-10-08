@@ -30,17 +30,28 @@ export default {
 .breadcrumbs {
   ul {
     display: flex;
-    & > li {
+
+    li {
+
       a {
         text-decoration: none;
+        color: #666666;
+        font-size: 0.9em;
+
         &:after {
           content: "";
           display: inline-block;
           background: url("/assets/icons/keyboard_arrow_right-24px.svg") no-repeat;
-          width: 20px;
-          height: 20px;
+          background-size: 100%;
+          width: 16px;
+          height: 16px;
           margin: 0 8px;
+          vertical-align: -3px;
         }
+      }
+      
+      &:last-child a:after {
+        display:none;
       }
     }
   }
