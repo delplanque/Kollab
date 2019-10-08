@@ -9,13 +9,10 @@
     "**/.editorconfig": true,
     "**/.babelrc": true,
     "**/.eslintrc.js": true,
-    "**/.gitignore": true,
-    "**/config": false,
     "**/babel.config.js": true,
     "**/.browserslistrc": true,
     "**/postcss.config.js": true,
-    "**/static": true,
-    "**/.vscode": false
+    "**/static": true
   },
   "workbench.colorCustomizations": {
     "activityBar.background": "#b9f8c4",
