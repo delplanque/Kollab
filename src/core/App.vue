@@ -7,10 +7,9 @@
 </template>
 
 <script>
-import HeaderBar from '../components/header';
 import { database } from '@/core/database';
+import HeaderBar from '../components/header';
 import Breadcrumbs from '../components/breadcrumbs';
-// import navDrawer from "../components/navDrawer";
 
 export default {
   name: 'main-layout',
@@ -18,7 +17,6 @@ export default {
   components: {
     HeaderBar,
     Breadcrumbs
-    // navDrawer
   },
 
   data: () => {
@@ -37,6 +35,7 @@ export default {
   mounted() {
     //console.log('items', this.items);
   },
+
   methods: {
     openNav(value) {
       this.drawer = value;

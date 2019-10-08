@@ -76,6 +76,7 @@ export default {
       padding: 10px;
       cursor: pointer;
       margin: 0 20px 0 0;
+      font-size: 16px;
       text-align: center;
       color: #666;
 
@@ -86,6 +87,7 @@ export default {
     }
   }
   &__content {
+    min-height: 600px;
     background-color: #f6f6f6;
   }
 }

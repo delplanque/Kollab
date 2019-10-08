@@ -1,8 +1,12 @@
 <template>
-  <div class="breadcrumbs">
+  <div class="breadcrumbs container">
     <ul>
-      <li><a href="#">Accueil</a></li>
-      <li><a href="#">Bienvenue</a></li>
+      <li>
+        <a href="#">Accueil</a>
+      </li>
+      <li>
+        <a href="#">Bienvenue</a>
+      </li>
     </ul>
   </div>
 </template>
@@ -28,20 +32,21 @@ export default {
 
 <style scoped lang="scss">
 .breadcrumbs {
+  padding: 5px 0;
   ul {
     display: flex;
 
     li {
-
       a {
         text-decoration: none;
         color: #666666;
         font-size: 0.9em;
 
         &:after {
-          content: "";
+          content: '';
           display: inline-block;
-          background: url("/assets/icons/keyboard_arrow_right-24px.svg") no-repeat;
+          background: url('/assets/icons/keyboard_arrow_right-24px.svg')
+            no-repeat;
           background-size: 100%;
           width: 16px;
           height: 16px;
@@ -49,9 +54,9 @@ export default {
           vertical-align: -3px;
         }
       }
-      
+
       &:last-child a:after {
-        display:none;
+        display: none;
       }
     }
   }
