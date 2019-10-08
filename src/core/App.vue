@@ -1,5 +1,6 @@
 <template>
   <div class="main-layout">
+    <HeaderBar></HeaderBar>
     <!-- <main-header :drawer="drawer" @openNav="openNav"></main-header> -->
     <router-view></router-view>
     <!-- <nav-drawer :drawer="drawer"></nav-drawer> -->
@@ -7,14 +8,14 @@
 </template>
 
 <script>
-// import mainHeader from "../components/header";
+import HeaderBar from '../components/header';
 // import navDrawer from "../components/navDrawer";
 
 export default {
-  name: "main-layout",
+  name: 'main-layout',
 
   components: {
-    // mainHeader,
+    HeaderBar
     // navDrawer
   },
 

@@ -1,22 +1,10 @@
 <template>
-  <!-- <v-app-bar
-      color="#303F9F"
-      dense
-      dark>
-    <v-layout>
-      <v-flex md11>
-      </v-flex>
-      <v-flex>
-        <v-app-bar-nav-icon @click.stop="isDrawer" ></v-app-bar-nav-icon>
-      </v-flex>
-    </v-layout>
-  </v-app-bar>-->
-  <div></div>
+  <div>Header</div>
 </template>
 
 <script>
 export default {
-  name: "header-bar",
+  name: 'header-bar',
   props: {
     drawer: {
       type: Boolean,
@@ -37,7 +25,7 @@ export default {
     isDrawer() {
       this.showDrawer = !this.showDrawer;
       console.log(this.showDrawer);
-      this.$emit("openNav", this.showDrawer);
+      this.$emit('openNav', this.showDrawer);
     }
   }
 };
