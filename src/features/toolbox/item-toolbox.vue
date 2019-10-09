@@ -2,13 +2,8 @@
   <div class="item-toolbox">
     <div class="item-toolbox__title">
       <img class="item-toolbox__icon" :src="data.link+'favicon.ico'">
-<<<<<<< HEAD
-      <a :href="data.link" target="_blank">{{data.name}}</a>
-      <button v-if="bin" class="item-toolbox__button-delete"></button>
-=======
-      <a :href="data.link">{{data.name.charAt(0).toUpperCase() + data.name.slice(1) }}</a>
+      <a :href="data.link" target="_blank">{{data.name.charAt(0).toUpperCase() + data.name.slice(1) }}</a>
       <button v-if="bin" @click="removeTool()" class="item-toolbox__button-delete"></button>
->>>>>>> c085d0a7d964cf6dc81269cde10f8271f936baae
     </div>
   </div>
 </template>
