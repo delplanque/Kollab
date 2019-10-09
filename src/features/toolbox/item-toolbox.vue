@@ -2,7 +2,7 @@
   <div class="item-toolbox">
     <div class="item-toolbox__title">
       <img class="item-toolbox__icon" :src="data.link+'favicon.ico'">
-      <a :href="data.link">{{data.name}}</a>
+      <a :href="data.link">{{data.name.charAt(0).toUpperCase() + data.name.slice(1) }}</a>
       <button v-if="bin" class="item-toolbox__button-delete"></button>
     </div>
   </div>
