@@ -33,6 +33,10 @@ create new state
 create new getter
 ```
 
+### URL
+https://pensive-babbage-e3c23e.netlify.com/#
+
+
 ```
 now you have to dispach action like : /core/App.vue
 and
