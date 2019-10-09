@@ -10,15 +10,15 @@
       <div class="container">
         <ul class="toolbox__list">
           <li v-for="(item, index) in toolbox" v-bind:key="index">
-            <ItemToolbox 
-            :data="item"
-            :bin="isActive('personnalTools')"
-            ></ItemToolbox>
+            <ItemToolbox :data="item" :bin="isActive('personnalTools')"></ItemToolbox>
           </li>
         </ul>
       </div>
     </div>
-    <AddTool :personnalTools="tabactive" v-if="isActive('personnalTools')"></AddTool>
+    <AddTool
+      :personnalTools="tabactive"
+      v-if="isActive('personnalTools') || isActive('collaborativeTools')"
+    ></AddTool>
   </section>
 </template>
 
@@ -112,7 +112,7 @@ export default {
     li {
       width: 33.333%;
       @media (max-width: 420px) {
-        width: 100%
+        width: 100%;
       }
     }
   }
