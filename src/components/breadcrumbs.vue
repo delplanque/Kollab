@@ -32,7 +32,7 @@ export default {
 
 <style scoped lang="scss">
 .breadcrumbs {
-  padding: 5px 0;
+  padding: 15px 0;
   ul {
     display: flex;
 

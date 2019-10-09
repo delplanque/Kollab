@@ -10,10 +10,13 @@
     </ul>
     <div class="toolbox__content">
       <div class="container">
-        <div class="toolbox__list">
-          <ItemToolbox></ItemToolbox>
-          <ItemToolbox></ItemToolbox>
-        </div>
+        <ul class="toolbox__list">
+          <li><ItemToolbox></ItemToolbox></li>
+          <li><ItemToolbox></ItemToolbox></li>
+          <li><ItemToolbox></ItemToolbox></li>
+          <li><ItemToolbox></ItemToolbox></li>
+          <li><ItemToolbox></ItemToolbox></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -94,6 +97,11 @@ export default {
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 33.333%;
+    }
   }
 }
 </style>
