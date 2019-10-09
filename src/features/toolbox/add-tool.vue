@@ -1,8 +1,8 @@
 <template>
   <section class="add-tool">
     <div @click="tooglePopin()" class="add-tool__add" :class="{ active: isPopin }">+</div>
-    <div class="overlay" @click="toogleMenu()" :class="{ active: isPopin }"></div>
-    <div class="add-tool__popin" @click="toogleMenu()" :class="{ active: isPopin }">
+    <div class="overlay" @click="tooglePopin()" :class="{ active: isPopin }"></div>
+    <div class="add-tool__popin" :class="{ active: isPopin }">
       <div>
         Nom
         <input v-model="itemToPush.name" />
