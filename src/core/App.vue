@@ -33,6 +33,7 @@ export default {
 
   created() {
     this.$bindAsArray('collaborative', database.ref(this.t));
+    
     //database.ref(this.t).push(this.itemToPush)
     //database.ref(this.t).child(this.collaborative[2]['.key']).remove()
     console.log('items', this.collaborative);
