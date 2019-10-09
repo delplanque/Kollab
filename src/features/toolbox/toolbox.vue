@@ -9,12 +9,11 @@
     <div class="toolbox__content">
       <div class="container">
         <ul class="toolbox__list">
-          <li v-for="item in toolbox">
-            <ItemToolbox
-              :data="item"
-              :bin="isActive('personnalTools')"
-            >
-            </ItemToolbox>
+          <li v-for="(item, index) in toolbox" v-bind:key="index">
+            <ItemToolbox 
+            :data="item"
+            :bin="isActive('personnalTools')"
+            ></ItemToolbox>
           </li>
         </ul>
       </div>
@@ -51,7 +50,7 @@ export default {
   computed: {},
 
   mounted() {
-    this.$bindAsArray('toolbox', database.ref(this.tabactive))
+    this.$bindAsArray('toolbox', database.ref(this.tabactive));
     this.getToolbox$ = fromEvent(
       document.querySelector('#changeTabs'),
       'click'

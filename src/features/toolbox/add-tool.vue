@@ -32,8 +32,8 @@ export default {
     return {
       isPopin: false,
       itemToPush: {
-        name: null,
-        link: null
+        name: '',
+        link: ''
       }
     };
   },
@@ -54,6 +54,9 @@ export default {
     addTool() {
       database.ref(this.personnalTools).push(this.itemToPush);
       database.ref('collaborativeTools').push(this.itemToPush);
+      this.tooglePopin();
+      this.itemToPush.name = '';
+      this.itemToPush.link = '';
     }
   }
 };
