@@ -3,6 +3,7 @@
     <div class="item-toolbox__title">
       <img class="item-toolbox__icon" :src="data.link+'favicon.ico'">
       <a :href="data.link">{{data.name}}</a>
+      <button v-if="bin" class="item-toolbox__button-delete"></button>
     </div>
   </div>
 </template>
@@ -12,7 +13,8 @@ export default {
   name: 'item-toolbox',
 
   props: {
-    data : {default: null}
+    data: {default: null},
+    bin: {type: Boolean, default: false}
   },
 
   data() {
@@ -56,6 +58,17 @@ export default {
     height: auto;
     vertical-align: -5px;
     margin-right: 10px;
+  }
+
+  &__button-delete {
+    float: right;
+    width: 23px;
+    height: 23px;
+    background-color: transparent;
+    background-size: 100%;
+    background: url('/assets/icons/delete_outline-24px.svg') no-repeat;
+    border: 0;
+    cursor: pointer;
   }
 }
 </style>

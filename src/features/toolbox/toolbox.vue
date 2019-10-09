@@ -3,14 +3,17 @@
     <ul class="toolbox__onglet container" id="changeTabs">
       <li id="collaborativeTools" :class="{ active: isActive('collaborativeTools') }">Collaboratifs</li>
       <li id="officialTools" :class="{ active: isActive('officialTools') }">Officiels</li>
-      <li id="personnalTools" :class="{ active: isActive('personnalTools') }">Mes Ajouts</li>
+      <li id="personnalTools" :class="{ active: isActive('personnalTools') }">Mes ajouts</li>
     </ul>
 
     <div class="toolbox__content">
       <div class="container">
         <ul class="toolbox__list">
           <li v-for="(item, index) in toolbox" v-bind:key="index">
-            <ItemToolbox :data="item"></ItemToolbox>
+            <ItemToolbox 
+            :data="item"
+            :bin="isActive('personnalTools')"
+            ></ItemToolbox>
           </li>
         </ul>
       </div>
@@ -87,6 +90,7 @@ export default {
       font-size: 16px;
       text-align: center;
       color: #666;
+      display: flex;
 
       &.active {
         border-bottom: 2px solid #4caf50;
@@ -102,9 +106,14 @@ export default {
   &__list {
     display: flex;
     flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    padding-top: 2em;
 
     li {
       width: 33.333%;
+      @media (max-width: 420px) {
+        width: 100%
+      }
     }
   }
 }
