@@ -1,4 +1,4 @@
-# hakaton
+# Kollab
 
 ## Project setup
 ```
@@ -34,7 +34,7 @@ create new getter
 ```
 
 ### URL
-https://pensive-babbage-e3c23e.netlify.com/#
+https://pensive-babbage-e3c23e.netlify.com/
 
 
 ```
