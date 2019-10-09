@@ -1,24 +1,28 @@
 <template>
   <div class="item-toolbox">
     <div class="item-toolbox__title">
-      <img class="item-toolbox__icon" :src="data.link+'favicon.ico'">
+      <img class="item-toolbox__icon" :src="data.link+'favicon.ico'" />
       <a :href="data.link">{{data.name}}</a>
-      <button v-if="bin" class="item-toolbox__button-delete"></button>
+      <button v-if="bin" @click="removeTool()" class="item-toolbox__button-delete"></button>
     </div>
   </div>
 </template>
 
 <script>
+import { database } from '@/core/database';
+
 export default {
   name: 'item-toolbox',
 
   props: {
-    data: {default: null},
-    bin: {type: Boolean, default: false}
+    data: { default: null },
+    bin: { type: Boolean, default: false }
   },
 
   data() {
-    return {};
+    return {
+      collaborative: []
+    };
   },
 
   created() {},
@@ -29,7 +33,22 @@ export default {
 
   mounted() {},
 
-  methods: {}
+  methods: {
+    removeTool() {
+      this.$bindAsArray('collaborative', database.ref('collaborativeTools'));
+      let collaborativeToRemove = this.collaborative.find(
+        x => x.name === this.data.name
+      );
+      database
+        .ref('personnalTools')
+        .child(this.data['.key'])
+        .remove();
+      database
+        .ref('collaborativeTools')
+        .child(collaborativeToRemove['.key'])
+        .remove();
+    }
+  }
 };
 </script>
 
@@ -37,7 +56,7 @@ export default {
 <style scoped lang="scss">
 .item-toolbox {
   border-radius: 4px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   background-color: #fff;
   box-sizing: border-box;
   padding: 1em;
@@ -52,7 +71,7 @@ export default {
       text-transform: uppercase;
     }
   }
-  
+
   &__icon {
     width: 23px;
     height: auto;
