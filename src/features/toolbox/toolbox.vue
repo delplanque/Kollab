@@ -5,6 +5,7 @@
       <li id="officialTools" :class="{ active: isActive('officialTools') }">Officiels</li>
       <li id="personnalTools" :class="{ active: isActive('personnalTools') }">Mes Ajouts</li>
     </ul>
+
     <div class="toolbox__content">
       <div class="container">
         <div class="toolbox__list">
