@@ -7,12 +7,24 @@
 </template>
 
 <script>
+import { database } from '@/core/database';
+
 export default {
   name: 'add-tool',
 
+  props: {
+    personnalTools: {
+      type: Array,
+      required: true
+    }
+  },
   data() {
     return {
-      isPopin: false
+      isPopin: false,
+      itemToPush: {
+        name: 'visual',
+        link: 'visualLink'
+      }
     };
   },
 
@@ -27,6 +39,10 @@ export default {
   methods: {
     tooglePopin() {
       this.isPopin = !this.isPopin;
+    },
+
+    addTool() {
+      database.ref(this.personnalTools).push(this.itemToPush);
     }
   }
 };

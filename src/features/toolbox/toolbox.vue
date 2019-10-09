@@ -8,12 +8,26 @@
 
     <div class="toolbox__content">
       <div class="container">
-        <div class="toolbox__list">
-          <ItemToolbox></ItemToolbox>
-        </div>
+        <ul class="toolbox__list">
+          <li>
+            <ItemToolbox></ItemToolbox>
+          </li>
+          <li>
+            <ItemToolbox></ItemToolbox>
+          </li>
+          <li>
+            <ItemToolbox></ItemToolbox>
+          </li>
+          <li>
+            <ItemToolbox></ItemToolbox>
+          </li>
+          <li>
+            <ItemToolbox></ItemToolbox>
+          </li>
+        </ul>
       </div>
     </div>
-    <AddTool v-if="isActive('personnalTools')"></AddTool>
+    <AddTool :personnalTools="tabactive" v-if="isActive('personnalTools')"></AddTool>
   </section>
 </template>
 
@@ -95,6 +109,15 @@ export default {
   &__content {
     min-height: 600px;
     background-color: #f6f6f6;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 33.333%;
+    }
   }
 }
 </style>
