@@ -21,22 +21,25 @@ export default {
 
   data: () => {
     return {
-      drawer: false
+      drawer: false,
+      collaborative: [],
+      itemToPush: {
+        name: 'visual',
+        link: 'visualLink'
+      },
+      t: 'collaborativeTools'
     };
   },
 
-  firebase: {
-    items: database.ref('collaborativeTools'),
-    itemsObj: {
-      source: database.ref('collaborativeTools'),
-      asObject: true
-    }
+
+  created() {
+    this.$bindAsArray('collaborative', database.ref(this.t))
+    //database.ref(this.t).push(this.itemToPush)
+    //database.ref(this.t).child(this.collaborative[2]['.key']).remove() 
+    console.log('items', this.collaborative);
   },
-
-  created() {},
-
   mounted() {
-    console.log('items', this.items);
+    //console.log('items', this.items);
   },
 
   methods: {
