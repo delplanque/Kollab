@@ -3,11 +3,24 @@
 </template>
 
 <script>
+import { database } from '@/core/database';
+
 export default {
   name: 'add-tool',
 
+  props: {
+    personnalTools: {
+      type: Array,
+      required: true
+    }
+  },
   data() {
-    return {};
+    return {
+      itemToPush: {
+        name: 'visual',
+        link: 'visualLink'
+      }
+    };
   },
 
   created() {},
@@ -18,7 +31,11 @@ export default {
 
   mounted() {},
 
-  methods: {}
+  methods: {
+    addTool() {
+      database.ref(this.personnalTools).push(this.itemToPush);
+    }
+  }
 };
 </script>
 

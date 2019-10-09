@@ -17,7 +17,7 @@
         </ul>
       </div>
     </div>
-    <AddTool></AddTool>
+    <AddTool :personnalTools="tabactive"></AddTool>
   </section>
 </template>
 
