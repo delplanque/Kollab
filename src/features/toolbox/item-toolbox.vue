@@ -1,8 +1,8 @@
 <template>
   <div class="item-toolbox">
     <div class="item-toolbox__title">
-      <img class="item-toolbox__icon" src="https://www.adobe.com/content/dam/cc/icons/photoshop.svg">
-      <a href="#">Photoshop</a>
+      <img class="item-toolbox__icon" :src="data.link+'favicon.ico'">
+      <a :href="data.link">{{data.name}}</a>
     </div>
   </div>
 </template>
@@ -10,6 +10,10 @@
 <script>
 export default {
   name: 'item-toolbox',
+
+  props: {
+    data : {default: null}
+  },
 
   data() {
     return {};
@@ -41,6 +45,10 @@ export default {
     font-size: 1.25em;
     text-decoration: none;
     color: #000;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
   }
   
   &__icon {
