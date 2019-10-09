@@ -12,6 +12,7 @@
           <li v-for="item in toolbox">
             <ItemToolbox
               :data="item"
+              :bin="isActive('personnalTools')"
             >
             </ItemToolbox>
           </li>
@@ -90,6 +91,7 @@ export default {
       font-size: 16px;
       text-align: center;
       color: #666;
+      display: flex;
 
       &.active {
         border-bottom: 2px solid #4caf50;
@@ -108,6 +110,9 @@ export default {
 
     li {
       width: 33.333%;
+      @media (max-width: 420px) {
+        width: 100%
+      }
     }
   }
 }
