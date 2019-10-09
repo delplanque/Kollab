@@ -13,11 +13,13 @@
         </div>
       </div>
     </div>
+    <AddTool></AddTool>
   </section>
 </template>
 
 <script>
 import ItemToolbox from './item-toolbox';
+import AddTool from './add-tool';
 import { fromEvent } from 'rxjs';
 import { pluck, tap } from 'rxjs/operators';
 import { database } from '@/core/database';
@@ -36,7 +38,8 @@ export default {
   created() {},
 
   components: {
-    ItemToolbox
+    ItemToolbox,
+    AddTool
   },
 
   computed: {},
