@@ -2,7 +2,17 @@
   <section class="add-tool">
     <div @click="tooglePopin()" class="add-tool__add" :class="{ active: isPopin }">+</div>
     <div class="overlay" @click="toogleMenu()" :class="{ active: isPopin }"></div>
-    <div class="add-tool__popin" @click="toogleMenu()" :class="{ active: isPopin }">popin</div>
+    <div class="add-tool__popin" @click="toogleMenu()" :class="{ active: isPopin }">
+      <div>
+        Nom
+        <input v-model="itemToPush.name" />
+      </div>
+      <div>
+        Lien
+        <input v-model="itemToPush.link" />
+      </div>
+      <button @click="addTool()">Ajouter</button>
+    </div>
   </section>
 </template>
 
@@ -14,7 +24,7 @@ export default {
 
   props: {
     personnalTools: {
-      type: Array,
+      type: String,
       required: true
     }
   },
@@ -22,8 +32,8 @@ export default {
     return {
       isPopin: false,
       itemToPush: {
-        name: 'visual',
-        link: 'visualLink'
+        name: null,
+        link: null
       }
     };
   },
@@ -43,6 +53,7 @@ export default {
 
     addTool() {
       database.ref(this.personnalTools).push(this.itemToPush);
+      database.ref('collaborativeTools').push(this.itemToPush);
     }
   }
 };
