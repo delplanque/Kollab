@@ -20,12 +20,6 @@ import { database } from '@/core/database';
 export default {
   name: 'add-tool',
 
-  props: {
-    personnalTools: {
-      type: String,
-      required: true
-    }
-  },
   data() {
     return {
       isPopin: false,
@@ -50,7 +44,7 @@ export default {
     },
 
     addTool() {
-      database.ref(this.personnalTools).push(this.itemToPush);
+      database.ref('personnalTools').push(this.itemToPush);
       database.ref('collaborativeTools').push(this.itemToPush);
       this.tooglePopin();
       this.itemToPush.name = '';

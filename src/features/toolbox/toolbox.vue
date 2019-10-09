@@ -18,7 +18,7 @@
         </ul>
       </div>
     </div>
-    <AddTool :personnalTools="tabactive" v-if="isActive('personnalTools')"></AddTool>
+    <AddTool v-if="isActive('personnalTools')"></AddTool>
   </section>
 </template>
 
