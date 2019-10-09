@@ -1,19 +1,9 @@
 <template>
   <section class="toolbox">
-<<<<<<< HEAD
-    <ul class="toolbox__onglet container">
-      <li
-        :class="{ active: isActive('collaboratif') }"
-        @click="changeTab('collaboratif')"
-      >Collaboratifs</li>
-      <li :class="{ active: isActive('officiel') }" @click="changeTab('officiel')">Officiels</li>
-      <li :class="{ active: isActive('add') }" @click="changeTab('add')">Mes ajouts</li>
-=======
     <ul class="toolbox__onglet container" id="changeTabs">
       <li id="collaborativeTools" :class="{ active: isActive('collaborativeTools') }">Collaboratifs</li>
       <li id="officialTools" :class="{ active: isActive('officialTools') }">Officiels</li>
       <li id="personnalTools" :class="{ active: isActive('personnalTools') }">Mes Ajouts</li>
->>>>>>> 28ada3faaa9d2aa5b12f3864a87dfe087f918d88
     </ul>
 
     <div class="toolbox__content">
