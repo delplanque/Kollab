@@ -23,7 +23,7 @@
       </button>
     </div>
 
-    <div class="header__overlay" @click="toogleMenu()" :class="{ active: isMenu }"></div>
+    <div class="overlay" @click="toogleMenu()" :class="{ active: isMenu }"></div>
 
     <div class="header__tab" :class="{ active: isMenu }">
       <button class="header__close" @click="toogleMenu()">
@@ -94,6 +94,7 @@ export default {
 
   &__tab {
     position: fixed;
+    z-index: 1000;
     width: 320px;
     top: 0;
     right: 0;
@@ -140,20 +141,6 @@ export default {
     position: absolute;
     right: 15px;
     transform: scale(0.7);
-  }
-
-  &__overlay {
-    background-color: rgba(#000, 0);
-    transition: all 200ms ease-out;
-
-    &.active {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(#000, 0.4);
-    }
   }
 }
 </style>

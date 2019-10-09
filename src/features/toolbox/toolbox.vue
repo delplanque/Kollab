@@ -13,7 +13,7 @@
         </div>
       </div>
     </div>
-    <AddTool></AddTool>
+    <AddTool v-if="isActive('personnalTools')"></AddTool>
   </section>
 </template>
 
