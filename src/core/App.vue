@@ -20,33 +20,11 @@ export default {
   },
 
   data: () => {
-    return {
-      drawer: false,
-      collaborative: [],
-      itemToPush: {
-        name: 'visual',
-        link: 'visualLink'
-      },
-      t: 'collaborativeTools'
-    };
+    return {};
   },
-
-  created() {
-    this.$bindAsArray('collaborative', database.ref(this.t));
-    
-    //database.ref(this.t).push(this.itemToPush)
-    //database.ref(this.t).child(this.collaborative[2]['.key']).remove()
-    console.log('items', this.collaborative);
-  },
-  mounted() {
-    //console.log('items', this.items);
-  },
-
-  methods: {
-    openNav(value) {
-      this.drawer = value;
-    }
-  }
+  created() {},
+  mounted() {},
+  methods: {}
 };
 </script>
 

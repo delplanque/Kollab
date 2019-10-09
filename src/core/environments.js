@@ -1,8 +1,4 @@
 export const global = {
-  environments: {
-    production: false,
-    baseURL: "http://62.210.144.173:81/"
-  },
   firebase: {
     apiKey: "AIzaSyDTAqNyYgLL-OzNrTab6f3aGhQnLpxf40I",
     authDomain: "kollab-82b03.firebaseapp.com",
